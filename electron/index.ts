@@ -2,8 +2,8 @@ import { join } from 'path';
 import { BrowserWindow, app, ipcMain } from 'electron';
 import isDev from 'electron-is-dev';
 
-const height = 600;
-const width = 800;
+const height = 360;
+const width = 520;
 
 function createWindow() {
   const window = new BrowserWindow({
@@ -13,6 +13,7 @@ function createWindow() {
     show: true,
     resizable: true,
     fullscreenable: true,
+    alwaysOnTop: true,
     webPreferences: {
       preload: join(__dirname, 'preload.js')
     }
@@ -26,8 +27,7 @@ function createWindow() {
   } else {
     window?.loadFile(url);
   }
-  window.webContents.openDevTools();
-
+  window.setPosition(720, 0);
   ipcMain.on('minimize', () => (window.isMinimized() ? window.restore() : window.minimize()));
   ipcMain.on('maximize', () => (window.isMaximized() ? window.restore() : window.maximize()));
 

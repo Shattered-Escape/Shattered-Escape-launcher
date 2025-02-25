@@ -1,30 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
+
+function Button({ onClick, code }: { onClick: () => void; code: string }) {
+  return (
+    <button
+      className="text-gray-100 rounded-sm px-4 bg-gray-900 whitespace-nowrap hover:bg-gray-800 border border-transparent hover:border-gray-600"
+      onClick={onClick}
+    >
+      {code}
+    </button>
+  );
+}
 
 function AppBar() {
-  const [isMaximize, setMaximize] = useState(false);
-
-  const handleToggle = () => {
-    if (isMaximize) {
-      setMaximize(false);
-    } else {
-      setMaximize(true);
-    }
-    window.Main.Maximize();
-  };
-
   return (
-    <div className="absolute top-0 left-0 w-full dark:bg-gray-800 bg-gray-200 py-1 pl-2 px-1 flex justify-between items-center draggable text-white">
-      <p className="text-md whitespace-nowrap overflow-hidden text-ellipsis">{document.title}</p>
-      <div className="undraggable inline-flex">
-        <button onClick={window.Main.Minimize} className="px-4 hover:bg-gray-300">
-          &#8211;
-        </button>
-        <button onClick={handleToggle} className="px-4 hover:bg-gray-300">
-          {isMaximize ? '\u2752' : '⃞'}
-        </button>
-        <button onClick={window.Main.Close} className="px-4 hover:bg-red-500 hover:text-white">
-          &#10005;
-        </button>
+    <div className="w-full bg-gray-800 p-1 flex justify-end items-center draggable">
+      <div className="undraggable inline-flex gap-1">
+        {/* REMOVE ESLINT RULES AFTER IMPLEMENTING */}
+        {/* eslint-disable-next-line @typescript-eslint/no-empty-function */}
+        <Button onClick={() => {}} code="Add Server" />
+        {/* eslint-disable-next-line @typescript-eslint/no-empty-function */}
+        <Button onClick={() => {}} code="Client and Server Options" />
+        <Button onClick={window.Main.Minimize} code="&#x2013;" />
+        <Button onClick={window.Main.Close} code="&#10005;" />
       </div>
     </div>
   );

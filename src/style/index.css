@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap')
+@import url(https://fonts.googleapis.com/css?family=Koulen:regular)
 layer(base);
 @import 'tailwindcss';
 
@@ -23,7 +23,8 @@ layer(base);
 }
 
 *{
-  font-family: 'Inter';
+  user-select: none;
+  font-family: 'Koulen';
 }
 .draggable {
     user-select: none;
