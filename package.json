@@ -25,10 +25,9 @@
     "build:electron": "tsc -p electron",
     "clean": "rimraf dist main src/out",
     "lint": "eslint . --ext js,jsx,ts,tsx",
-    "dist": "npm run build && electron-builder",
+    "dist": "npm run build && electron-builder --publish=always",
     "lint:fix": "eslint . --ext js,jsx,ts,tsx --fix",
     "pack": "npm run build && electron-builder --dir",
-    "dist:win": "npm run build && electron-builder --win",
     "dev:electron": "npm run build:electron && electron .",
     "build": "npm run build:vite && npm run build:electron"
   },
