@@ -23,7 +23,7 @@ function createWindow() {
   });
   const port = 3000;
   const url = isDev ? `http://localhost:${port}` : join(__dirname, '../dist-vite/index.html');
-
+  window.webContents.openDevTools();
   if (isDev) {
     window?.loadURL(url);
   } else {

@@ -1,24 +1,20 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ApplicationView from '../components/ApplicationView';
-import AppBar from '../components/AppBar';
-import Container from '../components/Container';
-import ServerList from '../components/ServerList';
-import IconList from '../components/IconList';
-import Title from '../components/Title';
-import Paragraph from '../components/Paragraph';
+import LeftSide from '../components/Views/LeftSide';
+import ServerListView from '../components/Views/ServerListView';
+import LoginPageView from '../components/Views/LoginPageView';
 
 export default function App() {
   return (
-    <ApplicationView>
-      <Container>
-        <Title />
-        <IconList />
-        <Paragraph />
-      </Container>
-      <Container>
-        <AppBar />
-        <ServerList />
-      </Container>
-    </ApplicationView>
+    <Router>
+      <ApplicationView>
+        <LeftSide />
+        <Routes>
+          <Route path="/" element={<ServerListView />} />
+          <Route path="/login" element={<LoginPageView />} />
+        </Routes>
+      </ApplicationView>
+    </Router>
   );
 }
