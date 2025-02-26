@@ -13,6 +13,7 @@ rmSync('dist-electron', { recursive: true, force: true });
 const buildElectron = (isDev: boolean) => ({
   sourcemap: isDev,
   minify: !isDev,
+
   outDir: join(root, 'dist-electron'),
   rollupOptions: { external: Object.keys(pkg.dependencies || {}) }
 });

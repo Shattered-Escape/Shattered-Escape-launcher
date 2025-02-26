@@ -1,29 +1,31 @@
 import React from 'react';
+import ApplicationView from '../components/ApplicationView';
 import AppBar from '../components/AppBar';
-import SafeView from '../components/SafeView';
+import Slogan from '../components/Slogan';
+import Container from '../components/Container';
+import ServerList from '../components/ServerList';
+import IconList from '../components/IconList';
 
-function Slogan() {
+export default function App() {
   return (
-    <div className="items-start">
-      <h1 className="text-3xl">
-        Shattered Escape <br />
-        Launcher
-      </h1>
-      <p className="text-gray-400">Where the fun begins.</p>
-    </div>
-  );
-}
-
-function App() {
-  return (
-    <SafeView>
-      <AppBar />
-      <div className="gap-8 p-4 h-full flex flex-row items-start justify-between">
+    <ApplicationView>
+      <Container>
         <Slogan />
-        <div className="p-4 bg-red-400 h-full">Lorem ipsum dolor sit amet consectetur.</div>
-      </div>
-    </SafeView>
+        <IconList />
+        <p className="bg-zinc-900 rounded-md border border-gray-600 p-1 grow text-zinc-50">
+          Thanks for Making this Possible!
+          <br />
+          <br />
+          There will be Several Updates in the Future, well as Fixes and Improvements.
+          <br />
+          <br />
+          Never let the Fire Die Out!
+        </p>
+      </Container>
+      <Container>
+        <AppBar />
+        <ServerList />
+      </Container>
+    </ApplicationView>
   );
 }
-
-export default App;

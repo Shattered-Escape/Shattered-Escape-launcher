@@ -1,17 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Koulen:regular)
+@import url(https://fonts.googleapis.com/css?family=Exo+2:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic)
 layer(base);
 @import 'tailwindcss';
 
 @config '../../tailwind.config.js';
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,
@@ -24,7 +16,7 @@ layer(base);
 
 *{
   user-select: none;
-  font-family: 'Koulen';
+  font-family: 'Exo 2';
 }
 .draggable {
     user-select: none;

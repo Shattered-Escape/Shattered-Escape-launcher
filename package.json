@@ -1,16 +1,19 @@
 {
   "license": "MIT",
   "version": "1.0.0",
-  "author": "Alask-Code",
+  "author": "Shattered Escape",
   "main": "dist-electron/index.js",
-  "name": "ts-electron-vite-react-tailwind",
-  "productName": "ts-electron-vite-react-tailwind",
-  "description": "Starter using Vite  React +Typescript + Electron for fast prototyping.",
+  "name": "shattered-escape-launcher",
+  "productName": "Shattered Escape Launcher",
+  "description": "Alternative Launcher for EFT.",
   "build": {
     "asar": true,
     "files": [
       "dist-electron",
       "dist-vite"
+    ],
+    "extraFiles": [
+      "resources"
     ],
     "directories": {
       "buildResources": "resources"
