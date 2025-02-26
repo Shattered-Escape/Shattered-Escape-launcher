@@ -1,11 +1,12 @@
 import React from 'react';
 import ServerListItem from './ServerListItem';
+import Label from './Label';
 
 export default function ServerList() {
   return (
     <div className="w-full h-full flex flex-col gap-1 overflow-auto">
-      <h1 className="pl-1 text-lg bg-amber-600 rounded-t-md font-semibold text-zinc-50">Available Servers</h1>
-      <div className="overflow-y-scroll bg-zinc-900 h-full w-full border rounded-t-md border-gray-600 flex flex-col justify-start items-start">
+      <Label />
+      <div className="overflow-y-auto bg-zinc-900/50 backdrop-blur-lg h-full w-full border border-zinc-600 flex flex-col justify-start items-start">
         <ServerListItem name="JET/Altered Escape - 2.2.0.4" />
         <ServerListItem name="Fuck Yeah" />
       </div>
