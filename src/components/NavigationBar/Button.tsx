@@ -4,21 +4,27 @@ import { useNavigate } from 'react-router-dom';
 
 function CloseButton() {
   return (
-    <button onClick={window.api.Close} className="undraggable text-2xl text-zinc-50 bg-red-600 rounded-sm">
+    <button
+      onClick={window.api.Close}
+      className="undraggable text-2xl text-zinc-50 bg-red-600 hover:bg-red-800 rounded-sm"
+    >
       <IoCloseOutline />
     </button>
   );
 }
 function BlankButton() {
   return (
-    <button className="undraggable text-2xl opacity-0">
+    <button className="text-2xl opacity-0">
       <IoCloseOutline />
     </button>
   );
 }
 function MinimizeButton() {
   return (
-    <button onClick={window.api.Minimize} className="undraggable text-2xl text-zinc-50 bg-amber-600 rounded-sm">
+    <button
+      onClick={window.api.Minimize}
+      className="undraggable text-2xl text-zinc-50 bg-amber-600 hover:bg-amber-800 rounded-sm"
+    >
       <IoChevronDownOutline />
     </button>
   );
@@ -27,7 +33,10 @@ function MinimizeButton() {
 function GoBackButton() {
   const navigate = useNavigate();
   return (
-    <button onClick={() => navigate(-1)} className="undraggable text-2xl bg-zinc-600 rounded-md text-zinc-50">
+    <button
+      onClick={() => navigate(-1)}
+      className="undraggable text-2xl bg-zinc-300 hover:bg-zinc-500 rounded-md text-zinc-50"
+    >
       <IoChevronBackOutline />
     </button>
   );
