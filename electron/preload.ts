@@ -4,7 +4,7 @@ contextBridge.exposeInMainWorld('ipcRenderer', ipcRenderer);
 
 declare global {
   interface Window {
-    Main: typeof api;
+    api: typeof api;
     ipcRenderer: typeof ipcRenderer;
   }
 }
@@ -24,4 +24,4 @@ const api = {
   }
 };
 
-contextBridge.exposeInMainWorld('Main', api);
+contextBridge.exposeInMainWorld('api', api);

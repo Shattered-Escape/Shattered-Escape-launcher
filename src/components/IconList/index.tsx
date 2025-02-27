@@ -4,11 +4,11 @@ import Button from './Button';
 export default function IconList() {
   return (
     <div className="w-full flex gap-1 ">
-      <Button label="Patreon" />
-      <Button label="Docs" />
-      <Button label="JET Discord" />
-      <Button label="Wiki" />
-      <Button label="Options" />
+      {/* <Button path="/patreon" label="Patreon" /> */}
+      <Button path="/" label="Notes" />
+      {/* <Button path="/discord" label="JET Discord" /> */}
+      {/* <Button path="/wiki" label="Wiki" /> */}
+      <Button path="/options" label="Options" />
     </div>
   );
 }

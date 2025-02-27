@@ -1,13 +1,11 @@
-import React from 'react';
+import { ReactNode, useState } from 'react';
 
-const useChangePageHandler = (targetComponent: React.FC, newComponent: React.FC): (() => void) => {
-  const [, setComponent] = React.useState<React.FC>(targetComponent);
+export default function useChangePageHandler(targetComponent: ReactNode, newComponent: ReactNode) {
+  const [, setComponent] = useState(targetComponent);
 
   const changeComponent = () => {
     setComponent(newComponent);
   };
 
   return changeComponent;
-};
-
-export default useChangePageHandler;
+}
