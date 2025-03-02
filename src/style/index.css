@@ -17,6 +17,7 @@ layer(base);
 *{
   user-select: none;
   font-family: 'Exo 2';
+  @apply text-zinc-50
 }
 .draggable {
     user-select: none;
